@@ -2,12 +2,12 @@
 <html>
   <head>
     <title>Magic Collection</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <h1>Magic Collection</h1>
 
-    <h2>Add a card</h2>
+    <h2>Add a card:</h2>
     <button id="openBtn">
       <span>&#43;</span>
     </button>
@@ -15,15 +15,29 @@
     <div class="popup" id="popup">
       <div class="popup-content">
         <span class="close" id="closeBtn">&times;</span>
-        <h3>card name</h3>
-        <textarea id="textInput" placeholder="Type something ..."></textarea>
+        <h3>Add Card</h3>
+        <label for="cardName">Card Name:</label>
+        <input type="text" id="cardName" />
+        <label for="quantity"><br />Quantity:</label>
+        <input type="number" id="quantity" min="1" />
         <button id="submitBtn">Submit</button>
       </div>
     </div>
 
-    <div id="mainContent">
-      <!-- Content added from popup will appear here -->
-    </div>
+<br></br>
+
+    <table id="inventory">
+      <thead>
+        <tr>
+          <th>Card Name</th>
+          <th>Quantity</th>
+        </tr>
+      </thead>
+
+      <tbody id="inventoryBody">
+        <!-- The added content dynamically -->
+      </tbody>
+    </table>
 
     <script src="script.js"></script>
   </body>
