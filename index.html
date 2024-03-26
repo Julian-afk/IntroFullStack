@@ -1,4 +1,30 @@
 <!DOCTYPE html>
 <html>
+  <head>
     <title>Magic Collection</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Magic Collection</h1>
+
+    <h2>Add a card</h2>
+    <button id="openBtn">
+      <span>&#43;</span>
+    </button>
+
+    <div class="popup" id="popup">
+      <div class="popup-content">
+        <span class="close" id="closeBtn">&times;</span>
+        <h3>card name</h3>
+        <textarea id="textInput" placeholder="Type something ..."></textarea>
+        <button id="submitBtn">Submit</button>
+      </div>
+    </div>
+
+    <div id="mainContent">
+      <!-- Content added from popup will appear here -->
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
