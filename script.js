@@ -16,7 +16,7 @@ document.getElementById("submitBtn").addEventListener("click", function () {
   }
 
   var table = document.getElementById('inventoryBody');
-  var rows = document.getElementsByTagName('tr');
+  var rows = document.getElementsByTagName('tr'); 
 
   // check for existing card
   for (let i = 0; i < rows.length; i++) {
@@ -35,9 +35,18 @@ document.getElementById("submitBtn").addEventListener("click", function () {
   var newRow = table.insertRow();
   var nameCell = newRow.insertCell(0);
   var quantityCell = newRow.insertCell(1);
+  var deleteCell = newRow.insertCell(2);
 
   nameCell.textContent = cardName;
   quantityCell.textContent = quantity;
+
+  var deleteBtn = document.createElement('button');
+  deleteBtn.innerHTML = '<span>&#128465;</span>';
+  deleteBtn.onclick = function(){
+    this.parentNode.parentNode.remove();
+  }
+
+  deleteCell.appendChild(deleteBtn);
 
   document.getElementById('popup').style.display = 'none';
   document.getElementById('cardName').value = '';
